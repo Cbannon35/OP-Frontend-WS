@@ -43,10 +43,6 @@ const ShoppingList = () => {
 
   function deleteItem(index) {
     setTimeout(() => {
-      if (items.length === 0) {
-        alert("No items to delete");
-        return;
-      }
       setItems((prevItems) => {
         const newItems = [...prevItems];
         newItems.splice(index, 1);
