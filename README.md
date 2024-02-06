@@ -25,7 +25,7 @@ How do we make something happen to a button when it is clicked? How do we keep t
 what the user is typing --> how do we listen for this change in input?
 
 2.
-Render this list of items. Look into the `map` function. Each object should have its name and price on the same row, and the items should fall into the same column. Try using flexbox here!
+Render this list of items. Look into the `map` function. It might be nice to use Flexbox to arrange the information in a row, but up to you!
 
 3.
 Then, try adding another "price" field that you can also add to the shopping list item.
@@ -35,14 +35,10 @@ You'll need to add a new <input> element and make sure that information tracked 
 Add the ".highlight" class to a shopping list item when it is clicked.
 
 5.
-Add a button that, when clicked:
-   - finds the first shopping list item
-   - adds the .highlight class
-   - waits one second
-   - then deletes this item (you can use .remove() on an element to remove it from the DOM!)
+Add a description for each item. Look in `Description.jsx` for more direction.
 
 6.
-Add a description for each item. Look in `Description.jsx` for more direction.
+For each item, add a button that will remove itself from the shopping list.
 
 # Credits
 
