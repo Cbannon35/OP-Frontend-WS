@@ -4,17 +4,15 @@ We will do all of our activity in this file.
 
 */
 import "./index.css";
-import React, {useState} from 'React';
+import React, {useState} from 'react';
 
 const itemTemplate = {
   name: '',
-  price: -1
 }
 
 function createItem(name, price) {
   const new_item = { ...itemTemplate };
   new_item.name = name;
-  new_item.price = price;
   return new_item
 }
 
@@ -40,7 +38,9 @@ const ShoppingList = () => {
           maxWidth: "400px",
           border: "1px solid black",
         }}
-      ></div>
+      >
+        {/* items.map... */}
+      </div>
 
       <h2>Add a new item</h2>
 
