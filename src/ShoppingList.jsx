@@ -4,29 +4,55 @@ We will do all of our activity in this file.
 
 */
 import "./index.css";
-import React, {useState} from 'React';
+import React, { useState } from "react";
+import ShoppingItem from "./components/ShoppingItem";
 
 const itemTemplate = {
-  name: '',
-  price: -1
-}
+  name: "",
+  price: -1,
+  description: "",
+};
 
 function createItem(name, price) {
   const new_item = { ...itemTemplate };
   new_item.name = name;
   new_item.price = price;
-  return new_item
+  return new_item;
 }
 
 const ShoppingList = () => {
-
   const [items, setItems] = useState([]);
+  const [name, setName] = useState("");
+  const [price, setPrice] = useState(0);
 
   function addItem() {
-    const new_item = // ?
+    if (name === "") {
+      alert("Please enter a name for the item");
+      return;
+    }
+    if (price <= 0) {
+      alert("Please enter a valid price for the item");
+      return;
+    }
+    const new_item = createItem(name, price);
 
+    setItems((prevItems) => [...prevItems, new_item]);
+    setName("");
+    setPrice(0);
+  }
 
-    setItems(prevItems => [...prevItems, new_item]);
+  function deleteItem(index) {
+    setTimeout(() => {
+      if (items.length === 0) {
+        alert("No items to delete");
+        return;
+      }
+      setItems((prevItems) => {
+        const newItems = [...prevItems];
+        newItems.splice(index, 1);
+        return newItems;
+      });
+    }, 1000); 
   }
 
   return (
@@ -37,10 +63,20 @@ const ShoppingList = () => {
         id="items"
         style={{
           minHeight: "100px",
-          maxWidth: "400px",
+          maxWidth: "800px",
           border: "1px solid black",
+          flex: "column",
         }}
-      ></div>
+      >
+        {items.map((item, index) => (
+          <ShoppingItem
+            key={index}
+            index={index}
+            item={item}
+            deleteItem={deleteItem}
+          />
+        ))}
+      </div>
 
       <h2>Add a new item</h2>
 
@@ -48,10 +84,24 @@ const ShoppingList = () => {
         <div>
           <label>
             Item name
-            <input type="text" />
+            <input
+              type="text"
+              onChange={(e) => setName(e.target.value)}
+              value={name}
+            />
+          </label>
+          <label>
+            Price
+            <input
+              type="number"
+              onChange={(e) => setPrice(e.target.value)}
+              value={price}
+            />
           </label>
         </div>
-        <button type="submit">Add item</button>
+        <button type="submit" onClick={addItem}>
+          Add item
+        </button>
       </div>
     </div>
   );

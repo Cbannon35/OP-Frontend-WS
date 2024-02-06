@@ -35,14 +35,10 @@ You'll need to add a new <input> element and make sure that information tracked 
 Add the ".highlight" class to a shopping list item when it is clicked.
 
 5.
-Add a button that, when clicked:
-   - finds the first shopping list item
-   - adds the .highlight class
-   - waits one second
-   - then deletes this item (you can use .remove() on an element to remove it from the DOM!)
+Add a description for each item. Look in `Description.jsx` for more direction.
 
 6.
-Add a description for each item. Look in `Description.jsx` for more direction.
+For each item, add a button that will remove itself from the shopping list.
 
 # Credits
 
