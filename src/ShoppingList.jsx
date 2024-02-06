@@ -1,6 +1,6 @@
 /*
 
-We will do all of our activity in this file.
+We will do most of our activity in this file.
 
 */
 import "./index.css";
