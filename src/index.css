@@ -1,6 +1,15 @@
 /* Place global styles here! */
 
 :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+body {
   margin: 0px;
   padding: 0px;
+}
+
+.highlight {
+  background-color: yellow;
+  box-shadow: 0 0 10px 3px yellow;
 }
