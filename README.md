@@ -19,26 +19,18 @@ https://openprojectberkeley.com/
 
 # Tasks
 
-1.
-First, hook up the "Add item" button so it adds a new section to the shopping list.
-How do we make something happen to a button when it is clicked? How do we keep track of
+1. First, hook up the "Add item" button so it adds a new section to the shopping list. How do we make something happen to a button when it is clicked? How do we keep track of
 what the user is typing --> how do we listen for this change in input?
 
-2.
-Render this list of items. Look into the `map` function. It might be nice to use Flexbox to arrange the information in a row, but up to you!
+2. Render this list of items. Look into the `map` function. It might be nice to use Flexbox to arrange the information in a row, but up to you!
 
-3.
-Then, try adding another "price" field that you can also add to the shopping list item.
-You'll need to add a new <input> element and make sure that information tracked by the state.
+3. Then, try adding another "price" field that you can also add to the shopping list item. You'll need to add a new <input> element and make sure that information tracked by the state.
 
-4.
-Add the ".highlight" class to a shopping list item when it is clicked.
+4. Add (or toggle) the ".highlight" class to a shopping list item when it is clicked.
 
-5.
-Add a description for each item. Look in `Description.jsx` for more direction.
+5. Add a description for each item. Look in `Description.jsx` for more direction.
 
-6.
-For each item, add a button that will remove itself from the shopping list.
+6. For each item, add a button that will remove the item (itself) from the shopping list.
 
 # Credits
 
